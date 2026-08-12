@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -114,7 +114,7 @@
 
   .journey-start{ text-align:center; margin-bottom:30px; }
   .journey-start .node-photo{
-    width:150px; height:150px; border-radius:50%; overflow:hidden; margin:0 auto 12px;
+    width:350px; height:350px; border-radius:50%; overflow:hidden; margin:0 auto 12px;
     border:4px solid var(--turmeric-light); box-shadow:0 16px 28px rgba(0,0,0,.35);
   }
   .journey-start .node-photo img{ width:100%; height:100%; object-fit:cover; }
@@ -183,6 +183,141 @@
   .seal-ring img{ width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
   .seal-card h3{ font-size: 20px; color: var(--forest); margin-bottom: 6px; line-height: 1.4; white-space: normal; }
   .seal-card p{ font-size: 18px; color: var(--ink-soft); line-height: 1.55; white-space: normal; }
+ 
+ 
+/* ingridients */
+   .ns-mag-wrapper {
+            width: var(--page-w);
+            max-width: 100%;
+            background: var(--forest);
+            box-shadow: 0 25px 50px rgba(22, 48, 31, 0.5);
+            overflow: hidden;
+            border: 1px solid var(--line);
+           
+        }
+
+        /* Creative Editorial Header */
+        .ns-mag-header {
+            background: var(--forest);
+            color: var(--cream);
+            padding: 30px var(--pad);
+            text-align: center;
+            border-bottom: 3px solid var(--turmeric);
+        }
+
+        .ns-mag-header h2 {
+            margin: 0 0 5px 0;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--turmeric-light);
+        }
+
+        .ns-mag-header p {
+            margin: 0;
+            font-size: 18px;
+            opacity: 0.9;
+            color: var(--cream);
+        }
+
+        /* Magazine Body Grid */
+        .ns-mag-body {
+            padding: var(--pad);
+            background: var(--cream);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Completely Unique Magazine Spread Card */
+        .ns-mag-spread-card {
+            background: var(--card);
+            border-radius: var(--radius-md);
+            padding: var(--pad);
+            border: 1px solid var(--line);
+            box-shadow: 0 10px 25px rgba(36, 28, 18, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* Alternating card themes using your exact theme colors */
+        .ns-mag-spread-card:nth-child(odd) {
+            background: linear-gradient(180deg, var(--card) 0%, #fef9ed 100%);
+            border-color: var(--line);
+        }
+
+        .ns-mag-spread-card:nth-child(even) {
+            background: linear-gradient(180deg, var(--card) 0%, #fdf6ee 100%);
+            border-color: #f3dfc1;
+        }
+
+        .ns-mag-spread-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(59, 93, 58, 0.15);
+            border-color: var(--turmeric);
+        }
+
+        /* Strict 140px+ Featured Image Frame */
+        .ns-mag-img-frame {
+            width: 100%;
+            height: 200px;
+            background: var(--cream);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px dashed var(--line);
+            margin-bottom: 16px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .ns-mag-spread-card:nth-child(odd) .ns-mag-img-frame {
+            border-color: var(--moss);
+            background: #f7f3e8;
+        }
+
+        .ns-mag-spread-card:nth-child(even) .ns-mag-img-frame {
+            border-color: var(--turmeric);
+            background: #fdf5ec;
+        }
+
+        .ns-mag-img-frame img {
+           width: 100%;
+           height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .ns-mag-spread-card:hover .ns-mag-img-frame img {
+            transform: scale(1.08);
+        }
+
+        /* Content Text */
+        .ns-mag-title {
+            margin: 0 0 6px 0;
+            font-size: 20px;
+            color: var(--forest);
+            font-weight: 800;
+        }
+
+        .ns-mag-spread-card:nth-child(even) .ns-mag-title {
+            color: var(--clay);
+        }
+
+        .ns-mag-desc {
+            margin: 0;
+            font-size: 18px;
+            color: var(--ink-soft);
+            line-height: 1.5;
+            font-weight: 500;
+        }
+ 
   /* ================= TESTIMONIALS — unchanged ================= */
   .testimonials{
     background:var(--forest); color:var(--cream);
@@ -507,19 +642,7 @@
 
 <img src="images/banner.avif" alt="">
   <!-- ================= 1. HERO — organic blob + stat chips ================= -->
-  <section class="hero">
-    <div class="hero-blob">
-      <img src="images/product.avif" alt="Neuro Shakti आयुर्वेदिक हर्बल सपोर्ट">
-    </div>
-    <p class="hero-eyebrow">100% आयुर्वेदिक • हर्बल फॉर्मूला</p>
-    <h1>नसों की सेहत और शरीर की <em>सामान्य गतिशीलता</em> को सपोर्ट करे</h1>
-    <p class="lede">पारंपरिक जड़ी-बूटियों पर आधारित Neuro Shakti, नियमित देखभाल के साथ रोज़मर्रा की सक्रियता बनाए रखने में सहायक हो सकता है।</p>
-    <div class="hero-stats">
-      <div class="stat"><strong>100%</strong><span>प्राकृतिक</span></div>
-      <div class="stat"><strong>GMP</strong><span>प्रमाणित</span></div>
-      <div class="stat"><strong>COD</strong><span>Available</span></div>
-    </div>
-  </section>
+  
 
 
   <!-- ================= 3. FEATURES — vertical journey with vine + nodes ================= -->
@@ -617,6 +740,79 @@
   </div>
 </section>
 
+
+
+<!-- ingridients  -->
+    <div class="ns-mag-wrapper">
+        
+        <!-- Header -->
+        <div class="ns-mag-header">
+            <h2>INGREDIENTS</h2>
+            <p>Powerful Ayurvedic Herbs का Balanced Formula</p>
+        </div>
+
+        <!-- Cards List -->
+        <div class="ns-mag-body">
+
+            <!-- 1. Ashwagandha -->
+            <div class="ns-mag-spread-card">
+                <div class="ns-mag-img-frame">
+                    <img src="images/ashawgandha.avif" alt="Ashwagandha">
+                </div>
+                <h3 class="ns-mag-title">Ashwagandha</h3>
+                <p class="ns-mag-desc">शरीर की ताकत, Energy और Recovery को Support करने वाली प्रसिद्ध Ayurvedic Herb।</p>
+            </div>
+
+            <!-- 2. Brahmi -->
+            <div class="ns-mag-spread-card">
+                <div class="ns-mag-img-frame">
+                    <img src="images/brahmi.avif" alt="Brahmi">
+                </div>
+                <h3 class="ns-mag-title">Brahmi</h3>
+                <p class="ns-mag-desc">Brain Health, Memory और Nervous System को Support करने में सहायक।</p>
+            </div>
+
+            <!-- 3. Shankhpushpi -->
+            <div class="ns-mag-spread-card">
+                <div class="ns-mag-img-frame">
+                    <img src="images/shankpuspi.avif" alt="Shankhpushpi">
+                </div>
+                <h3 class="ns-mag-title">Shankhpushpi</h3>
+                <p class="ns-mag-desc">Mind को Calm रखने और Brain Function को Support करने वाली पारंपरिक Herb।</p>
+            </div>
+
+            <!-- 4. Jatamansi -->
+            <div class="ns-mag-spread-card">
+                <div class="ns-mag-img-frame">
+                    <img src="images/jatamansi.avif" alt="Jatamansi">
+                </div>
+                <h3 class="ns-mag-title">Jatamansi</h3>
+                <p class="ns-mag-desc">Mental Relaxation और Nervous System के सामान्य स्वास्थ्य को Support करने में सहायक।</p>
+            </div>
+
+            <!-- 5. Giloy -->
+            <div class="ns-mag-spread-card">
+                <div class="ns-mag-img-frame">
+                    <img src="images/giloy.avif" alt="Giloy">
+                </div>
+                <h3 class="ns-mag-title">Giloy</h3>
+                <p class="ns-mag-desc">Body की Natural Immunity और Overall Wellness को Support करने वाली Ayurvedic Herb।</p>
+            </div>
+
+            <!-- 6. Amla -->
+            <div class="ns-mag-spread-card">
+                <div class="ns-mag-img-frame">
+                    <img src="images/amla.avif" alt="Amla">
+                </div>
+                <h3 class="ns-mag-title">Amla</h3>
+                <p class="ns-mag-desc">Natural Antioxidants से भरपूर, जो शरीर की Overall Health और Strength को बनाए रखने में सहायक मानी जाती है।</p>
+            </div>
+
+        </div>
+
+    </div>
+
+ 
   <!-- ================= 5. TESTIMONIALS (अपरिवर्तित / UNCHANGED) ================= -->
   <section class="testimonials">
     <div class="feature-head">
